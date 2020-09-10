@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace SistemaVenda.Models.ViewModel
+﻿namespace SistemaVenda.Models.ViewModel
 {
     public class GraficoViewModel
     {

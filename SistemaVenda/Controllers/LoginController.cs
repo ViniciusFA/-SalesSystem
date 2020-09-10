@@ -3,7 +3,6 @@ using Microsoft.AspNetCore.Mvc;
 using SistemaVenda.DAL;
 using SistemaVenda.Helpers;
 using SistemaVenda.Models.ViewModel;
-using System.Security.Cryptography;
 using Microsoft.AspNetCore.Http;
 
 namespace SistemaVenda.Controllers
