@@ -29,7 +29,7 @@ namespace SistemaVenda
             });
 
             services.AddDbContext<ApplicationDbContext>(options =>
-            options.UseSqlServer("Server=.;Database=Estoque;Trusted_Connection=True;MultipleActiveResultSets=true"));
+            options.UseSqlServer(Configuration.GetConnectionString("MyStock")));
 
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddSession();
@@ -53,12 +53,13 @@ namespace SistemaVenda
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
+            app.UseSession();
 
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                    template: "{controller=Login}/{action=Index}/{id?}");
             });
         }
     }
