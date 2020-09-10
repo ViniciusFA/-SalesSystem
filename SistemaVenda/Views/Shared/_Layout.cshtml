@@ -1,4 +1,26 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNetCore.Http;
+@inject IHttpContextAccessor HttpContext;
+
+@{
+    var logado = 0;
+    var nomeUsuario = string.Empty;
+
+    try
+    {
+        logado = (int)HttpContext.HttpContext.Session.GetInt32(SistemaVenda.Helpers.Sessao.LOGADO);
+        if(logado == 1)
+        {
+            nomeUsuario = HttpContext.HttpContext.Session.GetString(SistemaVenda.Helpers.Sessao.NOME_USUARIO);
+        }
+    }
+    catch
+    {
+        HttpContext.HttpContext.Response.Redirect("/Login");
+    }
+
+ }
+
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -17,27 +39,32 @@
     </environment>
 </head>
 <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">
-                    <img src="~/img/logo.png" width="100" height="20"/>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
+                    <img src="~/img/logo.png" height="40" />
                 </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbar"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Menu</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    Olá @nomeUsuario; <a href="~/Login/Index/0">(Sair)</a>
+                </div>
             </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li><a asp-area="" asp-controller="Home" asp-action="Index">Menu</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
+        </nav>
+    </header>
     <partial name="_CookieConsentPartial" />
 
     <div class="container body-content">
