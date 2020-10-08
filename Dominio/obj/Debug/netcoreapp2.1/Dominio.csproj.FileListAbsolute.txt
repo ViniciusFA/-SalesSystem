@@ -1,0 +1,4 @@
+C:\Workspace\Udemy\NetCore_DDD\SistemaVenda\SistemaVenda\Dominio\obj\Debug\netcoreapp2.1\Dominio.csprojAssemblyReference.cache
+C:\Workspace\Udemy\NetCore_DDD\SistemaVenda\SistemaVenda\Dominio\obj\Debug\netcoreapp2.1\Dominio.csproj.CoreCompileInputs.cache
+C:\Workspace\Udemy\NetCore_DDD\SistemaVenda\SistemaVenda\Dominio\obj\Debug\netcoreapp2.1\Dominio.AssemblyInfoInputs.cache
+C:\Workspace\Udemy\NetCore_DDD\SistemaVenda\SistemaVenda\Dominio\obj\Debug\netcoreapp2.1\Dominio.AssemblyInfo.cs
