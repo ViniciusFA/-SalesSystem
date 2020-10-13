@@ -4625,6 +4625,19 @@
         "runtime": {
           "bin/placeholder/Dominio.dll": {}
         }
+      },
+      "Repositorio/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "dependencies": {
+          "Dominio": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Repositorio.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Repositorio.dll": {}
+        }
       }
     }
   },
@@ -12537,6 +12550,11 @@
       "type": "project",
       "path": "../Dominio/Dominio.csproj",
       "msbuildProject": "../Dominio/Dominio.csproj"
+    },
+    "Repositorio/1.0.0": {
+      "type": "project",
+      "path": "../Repositorio/Repositorio/Repositorio.csproj",
+      "msbuildProject": "../Repositorio/Repositorio/Repositorio.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -12545,7 +12563,8 @@
       "Microsoft.AspNetCore.App >= 2.1.1",
       "Microsoft.AspNetCore.Razor.Design >= 2.1.2",
       "Microsoft.NETCore.App >= 2.1.0",
-      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.1.9"
+      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.1.9",
+      "Repositorio >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -12580,6 +12599,9 @@
           "projectReferences": {
             "C:\\Workspace\\Udemy\\NetCore_DDD\\SistemaVenda\\SistemaVenda\\Dominio\\Dominio.csproj": {
               "projectPath": "C:\\Workspace\\Udemy\\NetCore_DDD\\SistemaVenda\\SistemaVenda\\Dominio\\Dominio.csproj"
+            },
+            "C:\\Workspace\\Udemy\\NetCore_DDD\\SistemaVenda\\SistemaVenda\\Repositorio\\Repositorio\\Repositorio.csproj": {
+              "projectPath": "C:\\Workspace\\Udemy\\NetCore_DDD\\SistemaVenda\\SistemaVenda\\Repositorio\\Repositorio\\Repositorio.csproj"
             }
           }
         }

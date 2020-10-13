@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using Aplicacao.Serviço.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using SistemaVenda.DAL;
@@ -10,76 +11,76 @@ namespace SistemaVenda.Controllers
 {
     public class CategoriaController : Controller
     {
-        protected ApplicationDbContext mContext;
+        readonly IServicoAplicacaoCategoria ServicoAplicacaoCategoria;
 
-        public CategoriaController (ApplicationDbContext context)
+        public CategoriaController (IServicoAplicacaoCategoria servicoAplicacaoCategoria)
         {
-            mContext = context;
+            ServicoAplicacaoCategoria = servicoAplicacaoCategoria;
         }
 
         public IActionResult Index()
-        {
-            IEnumerable<Categoria> listaCategoria = mContext.Categoria.ToList();
-            return View(listaCategoria);
+        {  
+            return View(ServicoAplicacaoCategoria.Listagem());
         }
 
-        [HttpGet]
-        public IActionResult Cadastro(int? id)
-        {
-            CategoriaViewModel viewModel = new CategoriaViewModel();
 
-            if (id.HasValue)
-            {
-                var categoriaDb = mContext.Categoria.Where(x => x.Codigo == id).SingleOrDefault();
+        //[HttpGet]
+        //public IActionResult Cadastro(int? id)
+        //{
+        //    CategoriaViewModel viewModel = new CategoriaViewModel();
 
-                viewModel.Codigo = categoriaDb.Codigo;
-                viewModel.Descricao = categoriaDb.Descricao;
-            }  
+        //    if (id.HasValue)
+        //    {
+        //        var categoriaDb = mContext.Categoria.Where(x => x.Codigo == id).SingleOrDefault();
 
-            return View(viewModel);
-        }
+        //        viewModel.Codigo = categoriaDb.Codigo;
+        //        viewModel.Descricao = categoriaDb.Descricao;
+        //    }
 
-        [HttpPost]
-        public IActionResult Cadastro(CategoriaViewModel viewModel)
-        {
-            //ModelState check the model's DataAnnotations    
-            if (ModelState.IsValid)
-            {      
-                Categoria categoria = new Categoria
-                {
-                    Codigo = viewModel.Codigo,
-                    Descricao = viewModel.Descricao
-                };
+        //    return View(viewModel);
+        //}
 
-                if (viewModel.Codigo != null) 
-                    mContext.Entry(categoria).State = EntityState.Modified;
-                else
-                    mContext.Categoria.Add(categoria);
+        //[HttpPost]
+        //public IActionResult Cadastro(CategoriaViewModel viewModel)
+        //{
+        //    //ModelState check the model's DataAnnotations    
+        //    if (ModelState.IsValid)
+        //    {
+        //        Categoria categoria = new Categoria
+        //        {
+        //            Codigo = viewModel.Codigo,
+        //            Descricao = viewModel.Descricao
+        //        };
 
-                mContext.SaveChanges();
-            }
-            else
-                return View(viewModel);
+        //        if (viewModel.Codigo != null)
+        //            mContext.Entry(categoria).State = EntityState.Modified;
+        //        else
+        //            mContext.Categoria.Add(categoria);
 
-            return RedirectToAction("Index");
+        //        mContext.SaveChanges();
+        //    }
+        //    else
+        //        return View(viewModel);
 
-        }
+        //    return RedirectToAction("Index");
 
-        [HttpGet]
-        public IActionResult Excluir(int? id)
-        {
-            Categoria resultCategoria = null;
+        //}
 
-            if (id.HasValue)
-            {
-                resultCategoria = mContext.Categoria.Where(x => x.Codigo == id).SingleOrDefault();
-                mContext.Categoria.Remove(resultCategoria);
-                mContext.SaveChanges();
-                return RedirectToAction("Index");
-            }
+        //[HttpGet]
+        //public IActionResult Excluir(int? id)
+        //{
+        //    Categoria resultCategoria = null;
 
-            return View();
-        }
+        //    if (id.HasValue)
+        //    {
+        //        resultCategoria = mContext.Categoria.Where(x => x.Codigo == id).SingleOrDefault();
+        //        mContext.Categoria.Remove(resultCategoria);
+        //        mContext.SaveChanges();
+        //        return RedirectToAction("Index");
+        //    }
+
+        //    return View();
+        //}
 
     }
 }

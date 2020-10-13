@@ -1,10 +1,15 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using Aplicacao.Serviço;
+using Aplicacao.Serviço.Interfaces;
+using Dominio.Repositorio;
+using Dominio.Serviços;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Repositorio.Entidades;
 using SistemaVenda.DAL;
 
 namespace SistemaVenda
@@ -28,12 +33,25 @@ namespace SistemaVenda
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
+            //fica poor enquanto pois o projeto ainda não foi completamente migrado para o padrão DDD
             services.AddDbContext<ApplicationDbContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("MyStock")));
 
-            //services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            //a princípio será definitiva
+            services.AddDbContext<Repositorio.Contexto.ApplicationDbContext>(options =>
+            options.UseSqlServer(Configuration.GetConnectionString("MyStock")));
+
             services.AddHttpContextAccessor();
             services.AddSession();
+
+            //Serviço Aplicação
+            services.AddScoped<IServicoAplicacaoCategoria, ServicoAplicacaoCategoria>();
+
+            //Dominio
+            services.AddScoped<IServicoCategoria, ServicoCategoria>();
+
+            //Repositorio
+            services.AddScoped<IRepositorioCategoria, RepositorioCategoria>();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }

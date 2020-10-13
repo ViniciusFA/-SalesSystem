@@ -37,6 +37,8 @@ namespace SistemaVenda.Controllers
             {
                var senha = Criptografia.GetMd5Hash(loginViewModel.Senha);
 
+                //login : vini@gmail.com 
+                //senha : 123456
                 var resultDataBase = context.Usuario.Where(x => x.Email == loginViewModel.Email 
                                                              && x.Senha == senha).SingleOrDefault();
                 if(resultDataBase != null)
