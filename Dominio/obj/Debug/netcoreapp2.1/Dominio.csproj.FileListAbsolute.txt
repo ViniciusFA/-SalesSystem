@@ -2,3 +2,8 @@ C:\Workspace\Udemy\NetCore_DDD\SistemaVenda\SistemaVenda\Dominio\obj\Debug\netco
 C:\Workspace\Udemy\NetCore_DDD\SistemaVenda\SistemaVenda\Dominio\obj\Debug\netcoreapp2.1\Dominio.csproj.CoreCompileInputs.cache
 C:\Workspace\Udemy\NetCore_DDD\SistemaVenda\SistemaVenda\Dominio\obj\Debug\netcoreapp2.1\Dominio.AssemblyInfoInputs.cache
 C:\Workspace\Udemy\NetCore_DDD\SistemaVenda\SistemaVenda\Dominio\obj\Debug\netcoreapp2.1\Dominio.AssemblyInfo.cs
+C:\Workspace\Udemy\NetCore_DDD\SistemaVenda\SistemaVenda\Dominio\bin\Debug\netcoreapp2.1\Dominio.deps.json
+C:\Workspace\Udemy\NetCore_DDD\SistemaVenda\SistemaVenda\Dominio\bin\Debug\netcoreapp2.1\Dominio.dll
+C:\Workspace\Udemy\NetCore_DDD\SistemaVenda\SistemaVenda\Dominio\bin\Debug\netcoreapp2.1\Dominio.pdb
+C:\Workspace\Udemy\NetCore_DDD\SistemaVenda\SistemaVenda\Dominio\obj\Debug\netcoreapp2.1\Dominio.dll
+C:\Workspace\Udemy\NetCore_DDD\SistemaVenda\SistemaVenda\Dominio\obj\Debug\netcoreapp2.1\Dominio.pdb

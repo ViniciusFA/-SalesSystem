@@ -43,3 +43,5 @@ C:\Workspace\Udemy\NetCore_DDD\SistemaVenda\SistemaVenda\SistemaVenda\obj\Debug\
 C:\Workspace\Udemy\NetCore_DDD\SistemaVenda\SistemaVenda\SistemaVenda\obj\Debug\netcoreapp2.1\Aplicacao.dll
 C:\Workspace\Udemy\NetCore_DDD\SistemaVenda\SistemaVenda\SistemaVenda\obj\Debug\netcoreapp2.1\Aplicacao.pdb
 C:\Workspace\Udemy\NetCore_DDD\SistemaVenda\SistemaVenda\SistemaVenda\obj\Debug\netcoreapp2.1\Aplicacao.csproj.CopyComplete
+C:\Workspace\Udemy\NetCore_DDD\SistemaVenda\SistemaVenda\SistemaVenda\bin\Debug\netcoreapp2.1\Dominio.dll
+C:\Workspace\Udemy\NetCore_DDD\SistemaVenda\SistemaVenda\SistemaVenda\bin\Debug\netcoreapp2.1\Dominio.pdb
