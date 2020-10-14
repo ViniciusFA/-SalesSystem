@@ -9,8 +9,8 @@ namespace Repositorio
     public abstract class Repositorio<TEntity> : DbContext, IRepositorio<TEntity>
         where TEntity : EntityBase, new()
     {
-        DbContext Db;
-        DbSet<TEntity> DbSetContext;
+        protected DbContext Db;
+        protected DbSet<TEntity> DbSetContext;
 
         public Repositorio(DbContext dbContext)
         {
@@ -41,7 +41,7 @@ namespace Repositorio
             return DbSetContext.Where(x => x.Codigo == id).FirstOrDefault();
         }
 
-        public IEnumerable<TEntity> Read()
+        public virtual IEnumerable<TEntity> Read()
         {
             return DbSetContext.AsNoTracking().ToList();
         }

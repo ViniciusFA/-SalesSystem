@@ -22,5 +22,6 @@ namespace SistemaVenda.Models.ViewModel
         [Required(ErrorMessage = "Campo obrigatório")]
         public int? CodigoCategoria { get; set; }
         public IEnumerable<SelectListItem> ListaCategorias { get; set; }
+        public string DescricaoCategoria { get; set; }
     }
 }

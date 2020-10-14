@@ -48,14 +48,17 @@ namespace SistemaVenda
             //Serviço Aplicação
             services.AddScoped<IServicoAplicacaoCategoria, ServicoAplicacaoCategoria>();
             services.AddScoped<IServicoAplicacaoCliente, ServicoAplicacaoCliente>();
+            services.AddScoped<IServicoAplicacaoProduto, ServicoAplicacaoProduto>();
 
             //Dominio
             services.AddScoped<IServicoCategoria, ServicoCategoria>();
             services.AddScoped<IServicoCliente, ServicoCliente>();
+            services.AddScoped<IServicoProduto, ServicoProduto>();
 
             //Repositorio
             services.AddScoped<IRepositorioCategoria, RepositorioCategoria>();
             services.AddScoped<IRepositorioCliente, RepositorioCliente>();
+            services.AddScoped<IRepositorioProduto, RepositorioProduto>();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }

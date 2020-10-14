@@ -7,13 +7,13 @@ using System.Threading.Tasks;
 
 namespace Aplicacao.Serviço.Interfaces
 {
-    public interface IServicoAplicacaoCliente
+    public interface IServicoAplicacaoProduto
     {
-        ClienteViewModel CarregarRegistro(int codigoCliente);
+        ProdutoViewModel CarregarRegistro(int codigoProduto);
 
-        IEnumerable<ClienteViewModel> Listagem();
+        IEnumerable<ProdutoViewModel> Listagem();
 
-        void Cadastrar(ClienteViewModel clienteViewModel);
+        void Cadastrar(ProdutoViewModel produtoViewModel);
 
         void Excluir(int id);
     }

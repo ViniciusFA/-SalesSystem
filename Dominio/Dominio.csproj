@@ -7,7 +7,6 @@
   <ItemGroup>
     <Folder Include="Serviços\Venda\" />
     <Folder Include="Serviços\Usuário\" />
-    <Folder Include="Serviços\Produto\" />
   </ItemGroup>
 
 </Project>
