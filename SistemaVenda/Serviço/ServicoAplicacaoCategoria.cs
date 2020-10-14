@@ -1,11 +1,8 @@
 ﻿using Aplicacao.Serviço.Interfaces;
-using Dominio.Serviços;
+using Dominio.Interfaces;
 using SistemaVenda.Dominio.Entidades;
 using SistemaVenda.Models.ViewModel;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Aplicacao.Serviço
 {

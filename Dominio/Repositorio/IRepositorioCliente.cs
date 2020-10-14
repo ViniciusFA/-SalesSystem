@@ -2,7 +2,7 @@
 
 namespace Dominio.Repositorio
 {
-    public interface IRepositorioCliente : IRepositorio<Cliente>
+    public interface IRepositorioCategoria : IRepositorio<Categoria>
     {
     }
 }

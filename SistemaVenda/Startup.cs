@@ -1,5 +1,6 @@
 ﻿using Aplicacao.Serviço;
 using Aplicacao.Serviço.Interfaces;
+using Dominio.Interfaces;
 using Dominio.Repositorio;
 using Dominio.Serviços;
 using Microsoft.AspNetCore.Builder;
@@ -46,12 +47,15 @@ namespace SistemaVenda
 
             //Serviço Aplicação
             services.AddScoped<IServicoAplicacaoCategoria, ServicoAplicacaoCategoria>();
+            services.AddScoped<IServicoAplicacaoCliente, ServicoAplicacaoCliente>();
 
             //Dominio
             services.AddScoped<IServicoCategoria, ServicoCategoria>();
+            services.AddScoped<IServicoCliente, ServicoCliente>();
 
             //Repositorio
             services.AddScoped<IRepositorioCategoria, RepositorioCategoria>();
+            services.AddScoped<IRepositorioCliente, RepositorioCliente>();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }

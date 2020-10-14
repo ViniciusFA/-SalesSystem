@@ -47,6 +47,12 @@ C:\Workspace\Udemy\NetCore_DDD\SistemaVenda\SistemaVenda\SistemaVenda\obj\Debug\
 C:\Workspace\Udemy\NetCore_DDD\SistemaVenda\SistemaVenda\SistemaVenda\obj\Debug\netcoreapp2.1\Aplicacao.csproj.CopyComplete
 C:\Workspace\Udemy\NetCore_DDD\SistemaVenda\SistemaVenda\SistemaVenda\obj\Debug\netcoreapp2.1\Aplicacao.dll
 C:\Workspace\Udemy\NetCore_DDD\SistemaVenda\SistemaVenda\SistemaVenda\obj\Debug\netcoreapp2.1\Aplicacao.pdb
+C:\Workspace\UdemyC#\-SalesSystem\-SalesSystem\SistemaVenda\obj\Debug\netcoreapp2.1\Aplicacao.csprojAssemblyReference.cache
+C:\Workspace\UdemyC#\-SalesSystem\-SalesSystem\SistemaVenda\obj\Debug\netcoreapp2.1\Aplicacao.csproj.CoreCompileInputs.cache
+C:\Workspace\UdemyC#\-SalesSystem\-SalesSystem\SistemaVenda\obj\Debug\netcoreapp2.1\Aplicacao.RazorAssemblyInfo.cache
+C:\Workspace\UdemyC#\-SalesSystem\-SalesSystem\SistemaVenda\obj\Debug\netcoreapp2.1\Aplicacao.RazorAssemblyInfo.cs
+C:\Workspace\UdemyC#\-SalesSystem\-SalesSystem\SistemaVenda\obj\Debug\netcoreapp2.1\Aplicacao.AssemblyInfoInputs.cache
+C:\Workspace\UdemyC#\-SalesSystem\-SalesSystem\SistemaVenda\obj\Debug\netcoreapp2.1\Aplicacao.AssemblyInfo.cs
 C:\Workspace\UdemyC#\-SalesSystem\-SalesSystem\SistemaVenda\bin\Debug\netcoreapp2.1\Aplicacao.deps.json
 C:\Workspace\UdemyC#\-SalesSystem\-SalesSystem\SistemaVenda\bin\Debug\netcoreapp2.1\Aplicacao.runtimeconfig.json
 C:\Workspace\UdemyC#\-SalesSystem\-SalesSystem\SistemaVenda\bin\Debug\netcoreapp2.1\Aplicacao.runtimeconfig.dev.json
@@ -58,12 +64,6 @@ C:\Workspace\UdemyC#\-SalesSystem\-SalesSystem\SistemaVenda\bin\Debug\netcoreapp
 C:\Workspace\UdemyC#\-SalesSystem\-SalesSystem\SistemaVenda\bin\Debug\netcoreapp2.1\Repositorio.dll
 C:\Workspace\UdemyC#\-SalesSystem\-SalesSystem\SistemaVenda\bin\Debug\netcoreapp2.1\Dominio.pdb
 C:\Workspace\UdemyC#\-SalesSystem\-SalesSystem\SistemaVenda\bin\Debug\netcoreapp2.1\Repositorio.pdb
-C:\Workspace\UdemyC#\-SalesSystem\-SalesSystem\SistemaVenda\obj\Debug\netcoreapp2.1\Aplicacao.csprojAssemblyReference.cache
-C:\Workspace\UdemyC#\-SalesSystem\-SalesSystem\SistemaVenda\obj\Debug\netcoreapp2.1\Aplicacao.csproj.CoreCompileInputs.cache
-C:\Workspace\UdemyC#\-SalesSystem\-SalesSystem\SistemaVenda\obj\Debug\netcoreapp2.1\Aplicacao.RazorAssemblyInfo.cache
-C:\Workspace\UdemyC#\-SalesSystem\-SalesSystem\SistemaVenda\obj\Debug\netcoreapp2.1\Aplicacao.RazorAssemblyInfo.cs
-C:\Workspace\UdemyC#\-SalesSystem\-SalesSystem\SistemaVenda\obj\Debug\netcoreapp2.1\Aplicacao.AssemblyInfoInputs.cache
-C:\Workspace\UdemyC#\-SalesSystem\-SalesSystem\SistemaVenda\obj\Debug\netcoreapp2.1\Aplicacao.AssemblyInfo.cs
 C:\Workspace\UdemyC#\-SalesSystem\-SalesSystem\SistemaVenda\obj\Debug\netcoreapp2.1\Aplicacao.TagHelpers.input.cache
 C:\Workspace\UdemyC#\-SalesSystem\-SalesSystem\SistemaVenda\obj\Debug\netcoreapp2.1\Aplicacao.TagHelpers.output.cache
 C:\Workspace\UdemyC#\-SalesSystem\-SalesSystem\SistemaVenda\obj\Debug\netcoreapp2.1\Aplicacao.RazorCoreGenerate.cache

@@ -5,7 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Serviços\Cliente\" />
     <Folder Include="Serviços\Venda\" />
     <Folder Include="Serviços\Usuário\" />
     <Folder Include="Serviços\Produto\" />

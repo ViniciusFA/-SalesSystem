@@ -1,8 +1,7 @@
-﻿using System;
-using SistemaVenda.Dominio.Entidades;
+﻿using SistemaVenda.Dominio.Entidades;
 using System.Collections.Generic;
-using System.Text;
 using Dominio.Repositorio;
+using Dominio.Interfaces;
 
 namespace Dominio.Serviços
 {
@@ -15,11 +14,11 @@ namespace Dominio.Serviços
             RepositorioCategoria = repositorioCategoria;
         }
 
-        public void CadastrarCategoria(Categoria categoria)
+        public void Cadastrar(Categoria categoria)
         {
             RepositorioCategoria.Create(categoria);
         }
-
+        
         public Categoria CarregarRegistro(int id)
         {
             return RepositorioCategoria.Read(id);
