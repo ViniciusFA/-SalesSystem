@@ -688,23 +688,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Vini\\.nuget\\packages\\": {},
+    "C:\\Users\\resource\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Workspace\\Udemy\\NetCore_DDD\\SistemaVenda\\SistemaVenda\\Dominio\\Dominio.csproj",
+      "projectUniqueName": "C:\\Workspace\\UdemyC#\\-SalesSystem\\-SalesSystem\\Dominio\\Dominio.csproj",
       "projectName": "Dominio",
-      "projectPath": "C:\\Workspace\\Udemy\\NetCore_DDD\\SistemaVenda\\SistemaVenda\\Dominio\\Dominio.csproj",
-      "packagesPath": "C:\\Users\\Vini\\.nuget\\packages\\",
-      "outputPath": "C:\\Workspace\\Udemy\\NetCore_DDD\\SistemaVenda\\SistemaVenda\\Dominio\\obj\\",
+      "projectPath": "C:\\Workspace\\UdemyC#\\-SalesSystem\\-SalesSystem\\Dominio\\Dominio.csproj",
+      "packagesPath": "C:\\Users\\resource\\.nuget\\packages\\",
+      "outputPath": "C:\\Workspace\\UdemyC#\\-SalesSystem\\-SalesSystem\\Dominio\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Vini\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\resource\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

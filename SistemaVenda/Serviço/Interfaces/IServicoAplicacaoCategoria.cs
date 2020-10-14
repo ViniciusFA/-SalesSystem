@@ -9,6 +9,12 @@ namespace Aplicacao.Serviço.Interfaces
 {
     public interface IServicoAplicacaoCategoria
     {
+        CategoriaViewModel CarregarRegistro(int codigoCategoria);
+
         IEnumerable<CategoriaViewModel> Listagem();
+
+        void Cadastrar(CategoriaViewModel categoriaViewModel);
+
+        void Excluir(int id);
     }
 }

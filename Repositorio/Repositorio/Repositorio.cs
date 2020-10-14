@@ -7,30 +7,38 @@ using SistemaVenda.Dominio.Entidades;
 namespace Repositorio
 {
     public abstract class Repositorio<TEntity> : DbContext, IRepositorio<TEntity>
-        where TEntity : class, new()
+        where TEntity : EntityBase, new()
     {
-        DbContext db;
+        DbContext Db;
         DbSet<TEntity> DbSetContext;
 
         public Repositorio(DbContext dbContext)
         {
-            db = dbContext;
-            DbSetContext = db.Set<TEntity>();
+            Db = dbContext;
+            DbSetContext = Db.Set<TEntity>();
         }
 
         public void Create(TEntity Entity)
         {
-            throw new System.NotImplementedException();
+           if(Entity.Codigo == null)
+                DbSetContext.Add(Entity);
+            else
+                Db.Entry(Entity).State = EntityState.Modified;
+
+            Db.SaveChanges();
         }
 
         public void Delete(int id)
         {
-            throw new System.NotImplementedException();
+            var cliente = new TEntity { Codigo = id };
+            DbSetContext.Attach(cliente);
+            DbSetContext.Remove(cliente);
+            Db.SaveChanges();
         }
 
         public TEntity Read(int id)
         {
-            throw new System.NotImplementedException();
+            return DbSetContext.Where(x => x.Codigo == id).FirstOrDefault();
         }
 
         public IEnumerable<TEntity> Read()

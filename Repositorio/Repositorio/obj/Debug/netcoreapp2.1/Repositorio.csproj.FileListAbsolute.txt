@@ -12,3 +12,17 @@ C:\Workspace\Udemy\NetCore_DDD\SistemaVenda\SistemaVenda\Repositorio\Repositorio
 C:\Workspace\Udemy\NetCore_DDD\SistemaVenda\SistemaVenda\Repositorio\Repositorio\obj\Debug\netcoreapp2.1\Repositorio.csproj.CopyComplete
 C:\Workspace\Udemy\NetCore_DDD\SistemaVenda\SistemaVenda\Repositorio\Repositorio\obj\Debug\netcoreapp2.1\Repositorio.dll
 C:\Workspace\Udemy\NetCore_DDD\SistemaVenda\SistemaVenda\Repositorio\Repositorio\obj\Debug\netcoreapp2.1\Repositorio.pdb
+C:\Workspace\UdemyC#\-SalesSystem\-SalesSystem\Repositorio\Repositorio\bin\Debug\netcoreapp2.1\Repositorio.deps.json
+C:\Workspace\UdemyC#\-SalesSystem\-SalesSystem\Repositorio\Repositorio\bin\Debug\netcoreapp2.1\Repositorio.dll
+C:\Workspace\UdemyC#\-SalesSystem\-SalesSystem\Repositorio\Repositorio\bin\Debug\netcoreapp2.1\Repositorio.pdb
+C:\Workspace\UdemyC#\-SalesSystem\-SalesSystem\Repositorio\Repositorio\bin\Debug\netcoreapp2.1\Dominio.dll
+C:\Workspace\UdemyC#\-SalesSystem\-SalesSystem\Repositorio\Repositorio\bin\Debug\netcoreapp2.1\Microsoft.EntityFrameworkCore.dll
+C:\Workspace\UdemyC#\-SalesSystem\-SalesSystem\Repositorio\Repositorio\bin\Debug\netcoreapp2.1\Dominio.pdb
+C:\Workspace\UdemyC#\-SalesSystem\-SalesSystem\Repositorio\Repositorio\bin\Debug\netcoreapp2.1\Microsoft.EntityFrameworkCore.xml
+C:\Workspace\UdemyC#\-SalesSystem\-SalesSystem\Repositorio\Repositorio\obj\Debug\netcoreapp2.1\Repositorio.csprojAssemblyReference.cache
+C:\Workspace\UdemyC#\-SalesSystem\-SalesSystem\Repositorio\Repositorio\obj\Debug\netcoreapp2.1\Repositorio.csproj.CoreCompileInputs.cache
+C:\Workspace\UdemyC#\-SalesSystem\-SalesSystem\Repositorio\Repositorio\obj\Debug\netcoreapp2.1\Repositorio.AssemblyInfoInputs.cache
+C:\Workspace\UdemyC#\-SalesSystem\-SalesSystem\Repositorio\Repositorio\obj\Debug\netcoreapp2.1\Repositorio.AssemblyInfo.cs
+C:\Workspace\UdemyC#\-SalesSystem\-SalesSystem\Repositorio\Repositorio\obj\Debug\netcoreapp2.1\Repositorio.csproj.CopyComplete
+C:\Workspace\UdemyC#\-SalesSystem\-SalesSystem\Repositorio\Repositorio\obj\Debug\netcoreapp2.1\Repositorio.dll
+C:\Workspace\UdemyC#\-SalesSystem\-SalesSystem\Repositorio\Repositorio\obj\Debug\netcoreapp2.1\Repositorio.pdb

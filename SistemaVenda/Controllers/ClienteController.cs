@@ -74,17 +74,12 @@ namespace SistemaVenda.Controllers
         [HttpGet]
         public IActionResult Excluir(int? id)
         {
-            Cliente resultCliente = null;
+            var cliente = new Cliente() { Codigo = id };
+            mContext.Attach(cliente);
+            mContext.Remove(cliente);
+            mContext.SaveChanges();
 
-            if (id.HasValue)
-            {
-                resultCliente = mContext.Cliente.Where(x => x.Codigo == id).SingleOrDefault();
-                mContext.Cliente.Remove(resultCliente);
-                mContext.SaveChanges();
-                return RedirectToAction("Index");
-            }
-
-            return View();
+            return RedirectToAction("index");
         }
     }
 }

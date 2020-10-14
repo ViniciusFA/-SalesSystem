@@ -1,5 +1,6 @@
 ﻿using Aplicacao.Serviço.Interfaces;
 using Dominio.Serviços;
+using SistemaVenda.Dominio.Entidades;
 using SistemaVenda.Models.ViewModel;
 using System;
 using System.Collections.Generic;
@@ -35,5 +36,34 @@ namespace Aplicacao.Serviço
 
             return listaViewModel;
         }
+
+        public void Cadastrar(CategoriaViewModel categoriaViewModel)
+        {
+            Categoria categoria = new Categoria()
+            {
+                Codigo = categoriaViewModel.Codigo,
+                Descricao = categoriaViewModel.Descricao,
+            }; 
+
+            ServicoCategoria.Cadastrar(categoria);
+        }
+
+        public CategoriaViewModel CarregarRegistro(int codigoCategoria)
+        {
+            var registro = ServicoCategoria.CarregarRegistro(codigoCategoria);
+
+            CategoriaViewModel categoriaViewModel = new CategoriaViewModel
+            {
+                Codigo = registro.Codigo,
+                Descricao = registro.Descricao
+            };
+
+            return categoriaViewModel;
+        }
+
+        public void Excluir(int id)
+        {
+            ServicoCategoria.Excluir(id);
+        }     
     }
 }

@@ -7,7 +7,7 @@ namespace Dominio.Serviços
     {
         IEnumerable<Categoria> Listagem();
 
-        void CadastrarCategoria(Categoria categoria);
+        void Cadastrar(Categoria categoria);
 
         Categoria CarregarRegistro(int id);
 
