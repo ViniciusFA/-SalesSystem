@@ -1,14 +1,13 @@
-﻿using SistemaVenda.Entidades;
+﻿using Microsoft.AspNetCore.Mvc.Rendering;
 using SistemaVenda.Models.ViewModel;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Aplicacao.Serviço.Interfaces
 {
     public interface IServicoAplicacaoCliente
     {
+        IEnumerable<SelectListItem> ListaClientesDropDownList();
+
         ClienteViewModel CarregarRegistro(int codigoCliente);
 
         IEnumerable<ClienteViewModel> Listagem();
