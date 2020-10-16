@@ -1,17 +1,14 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using SistemaVenda.DAL;
 using SistemaVenda.Models;
 
 namespace SistemaVenda.Controllers
 {
     public class HomeController : Controller
     {
-        protected ApplicationDbContext Repositorio;
 
-        public HomeController(ApplicationDbContext repositorio)
+        public HomeController()
         {
-            Repositorio = repositorio;
         }
 
         public IActionResult Index()

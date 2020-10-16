@@ -5,8 +5,8 @@ using System.Collections.Generic;
 
 namespace Dominio.Interfaces
 {
-    public interface IServicoVenda : ISrervicoCRUD<Venda>
+    public interface IServicoUsuario : ISrervicoCRUD<Usuario>
     {
-        IEnumerable<GraficoViewModel> ListaGtafico();
+        bool ValidarLogin(string email, string senha);
     }
 }

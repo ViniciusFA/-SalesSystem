@@ -14,4 +14,3 @@ C:\Workspace\UdemyC#\-SalesSystem\-SalesSystem\Dominio\obj\Debug\netcoreapp2.1\D
 C:\Workspace\UdemyC#\-SalesSystem\-SalesSystem\Dominio\obj\Debug\netcoreapp2.1\Dominio.AssemblyInfo.cs
 C:\Workspace\UdemyC#\-SalesSystem\-SalesSystem\Dominio\obj\Debug\netcoreapp2.1\Dominio.dll
 C:\Workspace\UdemyC#\-SalesSystem\-SalesSystem\Dominio\obj\Debug\netcoreapp2.1\Dominio.pdb
-C:\Workspace\UdemyC#\-SalesSystem\-SalesSystem\Dominio\obj\Debug\netcoreapp2.1\Dominio.csprojAssemblyReference.cache

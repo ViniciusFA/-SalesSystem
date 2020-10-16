@@ -2,9 +2,6 @@
 using System.Linq;
 using Aplicacao.Serviço.Interfaces;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using SistemaVenda.DAL;
-using SistemaVenda.Entidades;
 using SistemaVenda.Models.ViewModel;
 
 namespace SistemaVenda.Controllers

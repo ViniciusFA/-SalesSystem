@@ -1,53 +1,57 @@
-﻿using System.Linq;
-using Microsoft.AspNetCore.Mvc;
-using SistemaVenda.DAL;
+﻿using Microsoft.AspNetCore.Mvc;
 using SistemaVenda.Helpers;
 using SistemaVenda.Models.ViewModel;
 using Microsoft.AspNetCore.Http;
+using Aplicacao.Serviço.Interfaces;
 
 namespace SistemaVenda.Controllers
 {
     public class LoginController : Controller
     {
-        protected ApplicationDbContext context;
-        protected IHttpContextAccessor httpContext;
+        readonly IServicoAplicacaoUsuario ServicoAplicacaoUsuario;
+        protected IHttpContextAccessor httpContextAcessor;
 
-        public LoginController(ApplicationDbContext Context, IHttpContextAccessor HttpContext)
+        public LoginController(IServicoAplicacaoUsuario servicoAplicacaoUsuario, 
+            IHttpContextAccessor HttpContext)
         {
-            context = Context;
-            httpContext = HttpContext;
+            ServicoAplicacaoUsuario = servicoAplicacaoUsuario;
+            httpContextAcessor = HttpContext;
         }
 
         public IActionResult Index(int? id)
         {
-            if(id !=null && id == 0)
+            if(id !=null )
             {
-                httpContext.HttpContext.Session.Clear();
+                if (id == 0)
+                {
+                    httpContextAcessor.HttpContext.Session.Clear();
+                }
             }
 
             return View();
         }
 
         [HttpPost]
-        public IActionResult Index(LoginViewModel loginViewModel)
+        public IActionResult Index(LoginViewModel model)
         {
             ViewData["ErrorLogin"] = string.Empty;
 
             if (ModelState.IsValid)
             {
-               var senha = Criptografia.GetMd5Hash(loginViewModel.Senha);
+               var senhaCriptogafada = Criptografia.GetMd5Hash(model.Senha);
 
                 //login : vini@gmail.com 
                 //senha : 123456
-                var resultDataBase = context.Usuario.Where(x => x.Email == loginViewModel.Email 
-                                                             && x.Senha == senha).SingleOrDefault();
-                if(resultDataBase != null)
+                bool loginValido = ServicoAplicacaoUsuario.ValidarLogin(model.Email, senhaCriptogafada);
+                var usuario = ServicoAplicacaoUsuario.RetornarDadosUsuario(model.Email, senhaCriptogafada);
+
+                if (loginValido)
                 {
                     //colocar os dados do usuário na sessão
-                    httpContext.HttpContext.Session.SetString(Sessao.NOME_USUARIO, resultDataBase.Nome);
-                    httpContext.HttpContext.Session.SetString(Sessao.EMAIL_USUARIO, resultDataBase.Email);
-                    httpContext.HttpContext.Session.SetInt32(Sessao.CODIGO_USUARIO, resultDataBase.Codigo.Value);
-                    httpContext.HttpContext.Session.SetInt32(Sessao.LOGADO, 1);
+                    httpContextAcessor.HttpContext.Session.SetString(Sessao.NOME_USUARIO, usuario.Nome);
+                    httpContextAcessor.HttpContext.Session.SetString(Sessao.EMAIL_USUARIO, usuario.Email);
+                    httpContextAcessor.HttpContext.Session.SetInt32(Sessao.CODIGO_USUARIO, usuario.Codigo.Value);
+                    httpContextAcessor.HttpContext.Session.SetInt32(Sessao.LOGADO, 1);
 
                     return RedirectToAction("Index" , "Home");
                 }
@@ -57,7 +61,7 @@ namespace SistemaVenda.Controllers
                 }
             }
             
-            return View(loginViewModel);
+            return View(model);
         }
     }
 }

@@ -1,36 +1,29 @@
 ﻿using System;
 using System.Linq;
+using Aplicacao.Serviço.Interfaces;
 using Microsoft.AspNetCore.Mvc;
-using SistemaVenda.DAL;
-using SistemaVenda.Models.ViewModel;
 
 namespace SistemaVenda.Controllers
 {
     public class RelatorioController : Controller
     {
-        protected ApplicationDbContext mContext;
+        readonly IServicoAplicacaoVenda ServicoVenda;
 
-        public RelatorioController(ApplicationDbContext Context)
+        public RelatorioController(IServicoAplicacaoVenda servicoVenda)
         {
-            mContext = Context;
+            ServicoVenda = servicoVenda;
         }
 
         public IActionResult Grafico()
         {
-            var lista = mContext.VendaProdutos
-                .GroupBy(x => x.CodigoProduto)
-                .Select(y => new GraficoViewModel
-                {
-                    CodigoProduto = y.FirstOrDefault().CodigoProduto,
-                    Descricao = y.FirstOrDefault().Produto.Descricao,
-                    TotalVendido = y.Sum(x => x.Quantidade)
-                }).ToList();
+            var lista = ServicoVenda.ListaGrafico().ToList();
 
             string valores = string.Empty;
             string labels = string.Empty;
             string cores = string.Empty;
 
             var random = new Random();
+
             for (int i = 0; i < lista.Count; i++)
             {
                 valores += lista[i].TotalVendido.ToString() + " , ";

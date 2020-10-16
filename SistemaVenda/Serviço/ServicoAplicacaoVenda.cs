@@ -70,6 +70,26 @@ namespace Aplicacao.Serviço
         {
             ServicoVenda.Excluir(id);
         }
-        
+
+        public IEnumerable<GraficoViewModel> ListaGrafico()
+        {
+            List<GraficoViewModel> lista = new List<GraficoViewModel>();
+
+            var listaAux = ServicoVenda.ListaGtafico();
+
+            foreach (var item in listaAux)
+            {
+                GraficoViewModel grafico = new GraficoViewModel()
+                {
+                    CodigoProduto = item.CodigoProduto,
+                    Descricao = item.Descricao,
+                    TotalVendido = item.TotalVendido
+                };
+
+                lista.Add(grafico);
+            }
+
+           return lista;
+        }
     }
 }
